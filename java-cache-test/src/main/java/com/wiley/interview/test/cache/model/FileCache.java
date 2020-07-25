@@ -93,8 +93,8 @@ public class FileCache implements JavaCache {
 	}
 
 	@Override
-	public void viewCache() {
-		System.out.println(cacheMap);
+	public String viewCache() {
+		return cacheMap.toString();
 	}
 
 	private String saveFile(String key, Object val) {

@@ -61,8 +61,8 @@ public class InMemmoryCache implements JavaCache{
     }
 
     @Override
-    public void viewCache() {
-        log.info(cacheMap);
+    public String viewCache() {
+    	return cacheMap.toString();
     }
 
 	@Override

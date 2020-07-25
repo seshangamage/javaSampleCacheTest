@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Insert title here</title>
 <style>
 .btn {
   border: 2px solid black;
@@ -27,13 +28,12 @@
 </style>
 </head>
 <body>
+	<div align="center">
+		<br>
+		<h4>${cache.viewCache()}</h4>
+		<br>
+		<a href="/add" class="btn default" role="button">Add Student</a>
 
-<h1>Cache Configuration</h1>
-
-
-<a href="/config" class="btn default" role="button">Cache Config</a>
-
-
-
+	</div>
 </body>
 </html>
