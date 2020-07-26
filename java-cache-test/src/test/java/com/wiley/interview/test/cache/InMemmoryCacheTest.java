@@ -42,8 +42,6 @@ public class InMemmoryCacheTest {
         cache.put("123458", s2 );
         cache.put("123459", s3 );
         cache.put("123460", s4 );
-        Student s10 = (Student) cache.get("123456");
-        System.out.println( s10.getAddress());
         cache.viewCache();
 	}
 	
@@ -81,8 +79,6 @@ public class InMemmoryCacheTest {
         cache.put("123458", s2 );
         cache.put("123459", s3 );
         cache.put("123460", s4 );
-        Student s10 = (Student) cache.get("123456");
-        System.out.println(s10.getAddress());
         cache.viewCache();
 	}
 

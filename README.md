@@ -1,14 +1,16 @@
 # javaSampleCacheTest
 
 Navigate to the /<home directory>/java-cache-test
-Run the below maven commands 
-1.     mvn clean install -Dmaven.test.skip=true
+To biuld the project run the below maven comand 
+1.	mvn clean install
 
-after succefull complteion run the belowe comand to run the test reulsts
+after succefull complteion of maven build run the below comand to run the jar file in your machine
 
-2. java -jar target/java-cache-test-0.0.1-SNAPSHOT.jar
+2.	java -jar target/java-cache-test-0.0.1-SNAPSHOT.jar
 
-after that go to the below link in your favurite web browser and visit the below link
+To test the memory project using the built in Web ui use the below link
 
-3 . localhost:8080/main
+3.	http://localhost:8080/main
 
+To call the memory project using the API use the postman collection in the /<home directory>/postman_collection
+ 

@@ -138,8 +138,7 @@ public class FileCache implements JavaCache {
 
 	@Override
 	public void clearCache() {
-		// TODO Auto-generated method stub
-		
+		cacheMap.values().forEach(n ->deleteFile(n.getValue().toString()));		
 	}
 
 }

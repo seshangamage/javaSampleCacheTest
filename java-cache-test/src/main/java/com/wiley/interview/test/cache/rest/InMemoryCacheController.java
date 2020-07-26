@@ -65,5 +65,16 @@ public class InMemoryCacheController {
 			return ResponseEntity.status(HttpStatus.BAD_GATEWAY).build();
 		}
 	}
+	
+	@GetMapping(path = "/clear", consumes = "application/json", produces = "application/json")
+	public ResponseEntity<Object> clearCache() {
+		try {
+			cache.clearCache();
+			return ResponseEntity.status(HttpStatus.OK).build();
+		}
+		catch(Exception e) {
+			return ResponseEntity.status(HttpStatus.BAD_GATEWAY).build();
+		}
+	}
 
 }

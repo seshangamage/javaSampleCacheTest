@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "621f7899-5e5a-4f74-a0d5-8bf9505a5d43",
+		"name": "JavaCacheTestCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "inFileCacheAPICollection",
+			"item": [
+				{
+					"name": "Add Student to InFileCache",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Erandi\",\n\t\"id\":\"12345\",\n\t\"age\": 32,\n\t\"address\":\"Colombo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/inmemory/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"inmemory",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Details of In File Cache",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/infile/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"infile",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Details of Student in File Cache by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/infile/get?id=12349",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"infile",
+								"get"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "12349"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clear In FIle cache",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/infile/clear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"infile",
+								"clear"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "InMemoryCacheAPICollection",
+			"item": [
+				{
+					"name": "Add Student to InMemoryCache",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Erandi\",\n\t\"id\":\"12345\",\n\t\"age\": 32,\n\t\"address\":\"Colombo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/inmemory/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"inmemory",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Details of InMemoryCache",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/inmemory/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"inmemory",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Details of Student by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/inmemory/get?id=12349",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"inmemory",
+								"get"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "12349"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clear In In Memory cache",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/inmemory/clear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"inmemory",
+								"clear"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
