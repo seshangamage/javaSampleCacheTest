@@ -1,6 +1,5 @@
 package com.wiley.interview.test.cache.web.view;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,13 +15,6 @@ import com.wiley.interview.test.cache.model.Student;
 @Controller
 @SessionAttributes("name")
 public class PageViewController {
-
-	@Value("${cache.level}")
-	private String level;
-	@Value("${cache.strategy}")
-	private String strategy;
-	@Value("${cache.maxsize}")
-	private int maxsize;
 	
 	private JavaCache javaCache;
 

@@ -11,7 +11,6 @@ import com.wiley.interview.test.cache.util.Constants;
 
 public class InMemmoryCache implements JavaCache{
 	
-
     Logger log = LogManager.getLogger(InMemmoryCache.class);
 
     private static final ConcurrentHashMap<String, Node> cacheMap = new ConcurrentHashMap<>();
@@ -52,11 +51,9 @@ public class InMemmoryCache implements JavaCache{
         if (STRATEGY.equals(Constants.LRU)) {
             String k = cacheMap.entrySet().stream().min(Comparator.comparing(stringNodeEntry -> stringNodeEntry.getValue().getUpdatedTime())).get().getKey();
             cacheMap.remove(k);
-            cacheMap.values().forEach(node -> log.info(node));
         } else {
             String k = cacheMap.entrySet().stream().min(Comparator.comparing(stringNodeEntry -> stringNodeEntry.getValue().getFrequency())).get().getKey();
             cacheMap.remove(k);
-            cacheMap.values().forEach(node -> log.info(node));
         }
     }
 
@@ -67,7 +64,7 @@ public class InMemmoryCache implements JavaCache{
 
 	@Override
 	public void clearCache() {
-		// TODO Auto-generated method stub
+		cacheMap.clear();
 		
 	}
 

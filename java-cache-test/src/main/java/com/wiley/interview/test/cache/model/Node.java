@@ -5,6 +5,7 @@ public class Node {
     private Object value;
     private long updatedTime;
     private int frequency;
+    
 
     Node(Object value){
         this.value = value;

@@ -32,7 +32,7 @@ public class FileCache implements JavaCache {
 	@Override
 	public void put(String key, Object value) {
 		if (key != null && value != null) {
-			while (cacheMap.size() >= MAX_SIZE) {
+			while (cacheMap.size() >= MAX_SIZE) { // change it to if
 				evict();
 			}
 			/*
