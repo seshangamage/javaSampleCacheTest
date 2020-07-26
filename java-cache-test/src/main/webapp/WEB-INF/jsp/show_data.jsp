@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>View Cache</title>
 <style>
 .btn {
   border: 2px solid black;
@@ -29,6 +29,7 @@
 </head>
 <body>
 	<div align="center">
+		<h3>Cache Data </h3>
 		<br>
 		<h4>${cache.viewCache()}</h4>
 		<br>

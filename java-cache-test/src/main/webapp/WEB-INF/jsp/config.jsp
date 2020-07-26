@@ -5,41 +5,94 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-.btn {
-	border: 2px solid black;
-	background-color: white;
-	color: black;
-	padding: 14px 28px;
-	font-size: 16px;
-	cursor: pointer;
+
+input[type=text], select {
+  width: 20%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
 }
 
-/* Gray */
-.default {
-	border-color: #e7e7e7;
-	color: black;
+input[type=text] {
+	width: 20%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
 }
 
-.default:hover {
-	background: #e7e7e7;
+input[type=submit]:hover {
+	background-color: #696969;
+}
+
+input[type=submit] {
+  background-color: #A9A9A9;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+.col-25 {
+	float: left;
+	width: 10%;
+	margin-top: 6px;
+}
+
+.col-75 {
+	float: left;
+	width: 90%;
+	margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 </style>
 </head>
 <body>
 
-	<h1>Cache Config</h1>
+	<h3>Cache Config</h3>
 
 	<form method="post" action="setup">
-		Level : <select name="level" id="level">
+		<div class="row">
+			<div class="col-25">
+				<label for="fname">Level</label>
+			</div>
+			<div class="col-75">
+				<select name="level" id="level">
 					<option value="memory">memory</option>
 					<option value="file">file</option>
-				</select> <br>
-		Strategy : <select name="strategy" id="strategy">
+				</select> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="fname">Strategy</label>
+			</div>
+			<div class="col-75">
+				<select name="strategy" id="strategy">
 					<option value="LRU">LRU</option>
 					<option value="LFU">LFU</option>
-				</select> <br>
-		Max Size : <input type="text" name="maxsize"><br> 
-		<input type="submit" value="Submit">
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="fname">Max Size</label>
+			</div>
+			<div class="col-75">
+				<input type="text" name="maxsize">
+			</div>
+		</div>
+		<div class="row">
+			<input type="submit" value="Submit">
+		</div>
 	</form>
 
 

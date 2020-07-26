@@ -131,7 +131,7 @@ public class FileCache implements JavaCache {
 	}
 
 	private String getFileLocation() {
-		File locationDir = new File("FileCacheS3");
+		File locationDir = new File("FileCache");
 		locationDir.mkdir();
 		return locationDir.getAbsolutePath();
 	}
